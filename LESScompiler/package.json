@@ -1,0 +1,9 @@
+{
+  "name": "LESScompiler",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-watch": "latest",
+    "assemble-less": "latest"
+  }
+}

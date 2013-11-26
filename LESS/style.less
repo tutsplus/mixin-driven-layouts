@@ -1,0 +1,66 @@
+* {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+header, footer {
+	.Row ( @padding: 20 * @toRems; @margin: 10 * @toRems auto; );
+	background-color: #ccc;
+	min-height: 100 * @toRems;
+}
+
+main {
+	.Row;
+}
+
+section {
+	.Cols ( @colspan: 3; @padding: 10 * @toRems 20 * @toRems; @gutter: 1; );
+	background-color: #ddd;
+}
+
+aside {
+	.Cols ( @colspan: 1; @padding: 10 * @toRems 20 * @toRems; @gutter: 1; @edge: true; );
+	background-color: #eee;
+}
+
+article {
+	.Cols ( @colspan: 1; @total_cols: 3; @padding: 0 20 * @toRems 20 * @toRems 20 * @toRems; @margin_bottom: 20 * @toRems;  @gutter: 2; );
+	background-color: #eee;
+	@media (min-width: 68rem) {
+		&:nth-of-type(3n) {
+			margin-right: 0;
+		}
+	}
+}
+
+@media (max-width: 68rem) {
+	article {
+		.Cols ( @colspan: 1; @total_cols: 2; @padding: 0 20 * @toRems 20 * @toRems 20 * @toRems; @margin_bottom: 20 * @toRems;  @gutter: 2; );
+		@media (min-width: 53rem) {
+			&:nth-of-type(2n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 53rem) {
+	article {
+		.Cols ( @colspan: 1; @total_cols: 1; @padding: 0 20 * @toRems 20 * @toRems 20 * @toRems; @margin_bottom: 20 * @toRems;  @gutter: 0; );
+	}
+	section {
+		.Cols ( @colspan: 2; @total_cols: 3; @padding: 10 * @toRems 20 * @toRems; @gutter: 1; );
+	}
+	aside {
+		.Cols ( @colspan: 1; @total_cols: 3; @padding: 10 * @toRems 20 * @toRems; @gutter: 1; @edge: true; );
+	}
+}
+
+@media (max-width: 36rem) {
+	section {
+		.Cols ( @colspan: 1; @total_cols: 1; @padding: 10 * @toRems 20 * @toRems; @edge: true; );
+	}
+	aside {
+		.Cols ( @colspan: 1; @total_cols: 1; @padding: 10 * @toRems 20 * @toRems; @edge: true; );
+	}
+}

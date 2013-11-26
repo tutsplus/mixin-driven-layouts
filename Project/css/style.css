@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+header,
+footer {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0.625rem auto;
+  padding: 1.25rem;
+  background-color: #ccc;
+  min-height: 6.25rem;
+}
+header:before,
+footer:before,
+header:after,
+footer:after {
+  content: "";
+  display: table;
+}
+header:after,
+footer:after {
+  clear: both;
+}
+main {
+  max-width: 75rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+main:before,
+main:after {
+  content: "";
+  display: table;
+}
+main:after {
+  clear: both;
+}
+section {
+  width: 74.75%;
+  float: left;
+  padding: 0.625rem 1.25rem;
+  margin: 0 1% 0 0;
+  background-color: #ddd;
+}
+aside {
+  width: 24.25%;
+  float: left;
+  padding: 0.625rem 1.25rem;
+  margin: 0 0 0 0;
+  background-color: #eee;
+}
+article {
+  width: 32%;
+  float: left;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  margin: 0 2% 1.25rem 0;
+  background-color: #eee;
+}
+@media (min-width: 68rem) {
+  article:nth-of-type(3n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 68rem) {
+  article {
+    width: 49%;
+    float: left;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    margin: 0 2% 1.25rem 0;
+  }
+}
+@media (max-width: 68rem) and (min-width: 53rem) {
+  article:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 53rem) {
+  article {
+    width: 100%;
+    float: left;
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    margin: 0 0% 1.25rem 0;
+  }
+  section {
+    width: 66.33333333333333%;
+    float: left;
+    padding: 0.625rem 1.25rem;
+    margin: 0 1% 0 0;
+  }
+  aside {
+    width: 32.666666666666664%;
+    float: left;
+    padding: 0.625rem 1.25rem;
+    margin: 0 0 0 0;
+  }
+}
+@media (max-width: 36rem) {
+  section {
+    width: 100%;
+    float: left;
+    padding: 0.625rem 1.25rem;
+    margin: 0 0 0 0;
+  }
+  aside {
+    width: 100%;
+    float: left;
+    padding: 0.625rem 1.25rem;
+    margin: 0 0 0 0;
+  }
+}
